@@ -66,7 +66,7 @@ const Apply = () => {
     <div className="min-h-screen bg-background">
       {/* Top bar */}
 
-      <div className="bg-white border-b border-border fixed left-0 margin max-w-7xl max-w-max navbar right-0 shadow-2xl top-0 z-50">
+      <div className="bg-white border-b border-border fixed left-0 margin  max-w-max navbar right-0 shadow-2xl top-0 z-50">
         <div className="container py-4 flex items-center gap-4">
           <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">
             <ArrowLeft className="w-5 h-5" />
