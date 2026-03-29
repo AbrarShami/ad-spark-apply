@@ -10,7 +10,7 @@ const StepsToJoin = () => (
     <div className="container max-w-4xl">
       <div className="text-center mb-16">
         <span className="text-sm font-semibold text-primary uppercase tracking-wider">Get Started</span>
-        <h2 className="text-3xl md:text-4xl font-black mt-3 mb-4">
+        <h2 className="text-3xl md:text-6xl font-black mt-3 mb-4">
           Steps to <span className="gradient-text">Join Us</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
@@ -20,7 +20,7 @@ const StepsToJoin = () => (
 
       <div className="space-y-6">
         {steps.map((s, i) => (
-          <div key={s.num} className="flex gap-6 items-start p-6 rounded-xl border border-border hover:border-primary/30 transition-colors">
+          <div key={s.num} className="flex shadow-card hover:shadow-card-hover gap-6 items-start p-6 rounded-xl border border-border hover:border-primary/30 transition-colors">
             <span className="text-4xl font-black gradient-text leading-none">{s.num}</span>
             <div>
               <h3 className="font-bold text-lg mb-1">{s.title}</h3>

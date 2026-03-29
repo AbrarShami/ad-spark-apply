@@ -1,7 +1,7 @@
 const Summary = () => (
   <section className="py-20 lg:py-28 surface-cool">
     <div className="container max-w-4xl text-center">
-      <h2 className="text-3xl md:text-4xl font-black mb-6">
+      <h2 className="text-3xl md:text-6xl font-black mb-6">
         Your Ads Deserve <span className="gradient-text">Better</span>
       </h2>
       <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto mb-6">

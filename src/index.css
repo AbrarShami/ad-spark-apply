@@ -105,12 +105,57 @@
 }
 
 .hero-section {
-  background-color: #6f27e5;
-  background-image: url(../../public/hero-img.svg);
+  /* background-color: #6f27e5; */
+  background: url(../../public/bg-2.jpg) center bottom no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 
 .font-white {
   color: white;
+}
+
+.bg-gradient {
+  background: url(../../public/bg22.png) center no-repeat;
+}
+
+.bg-gradient-sky {
+  background: linear-gradient(#f0f8fe, #fff0 100%);
+}
+
+#subheader {
+  overflow: hidden;
+  position: relative;
+  padding: 200px 0 90px 0;
+}
+
+.navbar {
+  margin: 0 auto;
+  top: 20px;
+  border-radius: 50px;
+  min-width: 80%;
+}
+
+.abs-middle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.scaleIn {
+  -webkit-animation-name: scaleIn;
+  animation-name: scaleIn;
+}
+
+.absolute,
+.abs {
+  position: absolute;
+}
+
+#pricing {
+  background: rgba(133, 89, 230, .1);
+}
+
+footer {
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(240, 242, 255) 100%);
+  ;
 }

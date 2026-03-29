@@ -15,6 +15,31 @@ import { ArrowLeft, CheckCircle2 } from "lucide-react";
 
 const Apply = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const formData = new FormData(e.currentTarget);
+      const response = await fetch("https://api.staticforms.xyz/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        alert("Form submission failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("An error occurred. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   if (submitted) {
     return (
@@ -40,7 +65,8 @@ const Apply = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Top bar */}
-      <div className="border-b border-border">
+
+      <div className="bg-white border-b border-border fixed left-0 margin max-w-7xl max-w-max navbar right-0 shadow-2xl top-0 z-50">
         <div className="container py-4 flex items-center gap-4">
           <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">
             <ArrowLeft className="w-5 h-5" />
@@ -49,25 +75,108 @@ const Apply = () => {
         </div>
       </div>
 
-      <div className="container max-w-2xl py-12 md:py-20">
-        <div className="text-center mb-10">
-          <h1 className="text-3xl md:text-4xl font-black mb-3">Apply to Work With Us</h1>
-          <p className="text-muted-foreground max-w-lg mx-auto">
-            Please answer the questions below so we can determine if we're the right fit for your business. All fields are required.
-          </p>
+      <section
+        id="subheader"
+        className="jarallax relative"
+        style={{ zIndex: 0, backgroundSize: "cover", backgroundRepeat: "no-repeat" }}
+      >
+        <div
+          className="container relative z-2"
+          style={{ backgroundSize: "cover", backgroundRepeat: "no-repeat" }}
+        >
+          <div
+            className="row justify-content-between align-items-center"
+            style={{ backgroundSize: "cover", backgroundRepeat: "no-repeat" }}
+          >
+            <div
+              className="col-lg-6"
+              style={{ backgroundSize: "cover", backgroundRepeat: "no-repeat" }}
+            >
+
+              <h1
+                className="wow fadeInUp animated text-2xl md:text-6xl "
+                data-wow-delay=".4s"
+                style={{
+                  visibility: "visible",
+                  animationDelay: "0.4s",
+                  animationName: "fadeInUp"
+                }}
+              >
+                Apply to Work With Us
+              </h1>
+              <div className="text-left mb-10">
+                <p className="text-muted-foreground max-w-lg mt-4">
+                  Please answer the questions below so we can determine if we're the right fit for your business. All fields are required.
+                </p>
+              </div>
+            </div>
+            <div
+              className="w-48 mr-4 lg:mr-0 lg:w-80 abs abs-middle end-0 xs-hide"
+              style={{ backgroundSize: "cover", backgroundRepeat: "no-repeat" }}
+            >
+              <img
+                src="../../public/c4.webp"
+                className="w-100 wow scaleIn animated"
+                data-wow-duration="2s"
+                alt=""
+                style={{
+                  visibility: "visible",
+                  animationDuration: "2s",
+                  animationName: "scaleIn"
+                }}
+              />
+            </div>
+          </div>
         </div>
+        <div
+          id="jarallax-container-0"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            overflow: "hidden",
+            zIndex: -100,
+            clipPath: "polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%)",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat"
+          }}
+        >
+          <img
+            src="../../public/2.webp"
+            className="jarallax-img"
+            alt=""
+            style={{
+              objectFit: "cover",
+              objectPosition: "50% 50%",
+              maxWidth: "none",
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "389.4px",
+              overflow: "hidden",
+              pointerEvents: "none",
+              transformStyle: "preserve-3d",
+              backfaceVisibility: "hidden",
+              willChange: "transform, opacity",
+              marginTop: "-17.2px",
+              transform: "translate3d(0px, 17.2px, 0px)"
+            }}
+          />
+        </div>
+      </section>
+
+      <div className="container max-w-4xl py-2 ">
+
 
         <form
-          action="https://api.staticforms.xyz/submit"
-          method="POST"
-          onSubmit={() => {
-            setTimeout(() => setSubmitted(true), 100);
-          }}
+          onSubmit={handleSubmit}
           className="space-y-6"
         >
           {/* StaticForms access key — replace with your own */}
-          <input type="hidden" name="accessKey" value="YOUR_STATICFORMS_ACCESS_KEY" />
-          <input type="hidden" name="redirectTo" value="" />
+          <input type="hidden" name="accessKey" value="sf_4d7f160bcd3144f5ef0fd0a0" />
 
           {/* Contact Info */}
           <div className="p-6 rounded-xl border border-border space-y-4">
@@ -199,8 +308,8 @@ const Apply = () => {
             </div>
           </div>
 
-          <Button type="submit" size="lg" className="w-full py-6 text-base font-bold">
-            Submit Application
+          <Button type="submit" size="lg" className="w-full py-6 text-base font-bold" disabled={isLoading}>
+            {isLoading ? "Submitting..." : "Submit Application"}
           </Button>
 
           <p className="text-xs text-muted-foreground text-center">

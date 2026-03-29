@@ -10,11 +10,11 @@ const features = [
 ];
 
 const Features = () => (
-  <section id="features" className="py-20 lg:py-28">
+  <section id="features" className="py-20 bg-gradient lg:py-28">
     <div className="container max-w-6xl">
       <div className="text-center mb-16">
         <span className="text-sm font-semibold text-primary uppercase tracking-wider">Features</span>
-        <h2 className="text-3xl md:text-4xl font-black mt-3 mb-4">
+        <h2 className="text-3xl md:text-6xl font-black mt-3 mb-4">
           Everything You Need to <span className="gradient-text">Win with Ads</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">

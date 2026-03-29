@@ -20,8 +20,8 @@ const Index = () => (
     <Features />
     <WhatMakesUsSpecial />
     <StepsToJoin />
-    <Pricing />
     <Testimonials />
+    <Pricing />
     <CaseStudies />
     <FAQ />
     <Summary />

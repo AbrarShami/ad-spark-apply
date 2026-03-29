@@ -15,7 +15,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <nav className="navbar bg-white border-b border-border fixed left-0 margin max-w-7xl right-0 shadow-2xl top-0 z-50">
       <div className="container flex items-center justify-between h-16">
         <a href="#" className="text-xl font-bold gradient-text">
           AdScale Pro

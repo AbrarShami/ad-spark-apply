@@ -42,7 +42,7 @@ const Pricing = () => (
     <div className="container max-w-7xl">
       <div className="text-center mb-16">
         <span className="text-sm font-semibold text-primary uppercase tracking-wider">Pricing</span>
-        <h2 className="text-3xl md:text-4xl font-black mt-3 mb-4">
+        <h2 className="text-3xl md:text-6xl font-black mt-3 mb-4">
           Plans That <span className="gradient-text">Fit Your Growth</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
@@ -54,9 +54,8 @@ const Pricing = () => (
         {plans.map((p) => (
           <div
             key={p.name}
-            className={`relative flex flex-col rounded-2xl p-6 bg-card ${
-              p.popular ? "border-2 border-primary shadow-card-hover" : "border border-border shadow-card"
-            }`}
+            className={`relative flex flex-col rounded-2xl p-6 bg-card ${p.popular ? "border-2 border-primary shadow-card-hover" : "border border-border shadow-card"
+              }`}
           >
             {p.popular && (
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full gradient-hero text-xs font-bold text-primary-foreground">

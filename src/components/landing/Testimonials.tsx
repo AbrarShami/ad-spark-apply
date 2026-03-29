@@ -28,11 +28,11 @@ const testimonials = [
 ];
 
 const Testimonials = () => (
-  <section id="testimonials" className="py-20 lg:py-28">
+  <section id="testimonials" className="py-20 lg:py-28 bg-gradient-sky">
     <div className="container max-w-6xl">
       <div className="text-center mb-16">
         <span className="text-sm font-semibold text-primary uppercase tracking-wider">Testimonials</span>
-        <h2 className="text-3xl md:text-4xl font-black mt-3 mb-4">
+        <h2 className="text-3xl md:text-6xl font-black mt-3 mb-4">
           Trusted by <span className="gradient-text">Growing Brands</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">

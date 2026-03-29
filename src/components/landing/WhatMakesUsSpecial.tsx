@@ -8,11 +8,11 @@ const specials = [
 ];
 
 const WhatMakesUsSpecial = () => (
-  <section className="py-20 lg:py-28 surface-warm">
+  <section className="py-20 lg:py-28 surface-cool">
     <div className="container max-w-6xl">
       <div className="text-center mb-16">
         <span className="text-sm font-semibold text-primary uppercase tracking-wider">Why Choose Us</span>
-        <h2 className="text-3xl md:text-4xl font-black mt-3 mb-4">
+        <h2 className="text-3xl md:text-6xl font-black mt-3 mb-4">
           What Makes Us <span className="gradient-text">Different</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
@@ -22,7 +22,7 @@ const WhatMakesUsSpecial = () => (
 
       <div className="grid md:grid-cols-2 gap-8">
         {specials.map((s) => (
-          <div key={s.title} className="flex gap-5 p-6 rounded-xl bg-card shadow-card">
+          <div key={s.title} className="flex hover:shadow-card-hover  gap-5 p-6 rounded-xl bg-card shadow-card">
             <div className="flex-shrink-0 w-14 h-14 rounded-xl gradient-hero flex items-center justify-center">
               <s.icon className="w-7 h-7 text-primary-foreground" />
             </div>

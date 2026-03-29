@@ -9,7 +9,7 @@ const highlights = [
 ];
 
 const HeroSection = () => (
-  <section className="hero-section relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+  <section className="hero-section relative pt-32 pb-20 lg:pt-40 lg:pb-28 xl:pb-28 overflow-hidden">
     {/* Background gradient blob */}
     <div className="absolute inset-0 -z-10">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[600px] rounded-full gradient-hero opacity-[0.07] blur-3xl" />
@@ -31,7 +31,7 @@ const HeroSection = () => (
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
         <Link to="/apply">
-          <Button size="lg" className="gap-2 text-base px-8 py-6 background-none border-2 border-white text-primary font-white">
+          <Button size="lg" className="gap-2 hover:bg-white hover:text-foreground text-base px-8 py-6 background-none border-2 border-white bg-color-none text-primary font-white">
             Apply to Work With Us <ArrowRight className="w-4 h-4" />
           </Button>
         </Link>

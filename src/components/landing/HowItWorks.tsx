@@ -28,7 +28,7 @@ const HowItWorks = () => (
     <div className="container max-w-6xl">
       <div className="text-center mb-16">
         <span className="text-sm font-semibold text-primary uppercase tracking-wider">How It Works</span>
-        <h2 className="text-3xl md:text-4xl font-black mt-3 mb-4">
+        <h2 className="text-3xl md:text-6xl font-black mt-3 mb-4">
           Four Simple Steps to <span className="gradient-text">Better Ads</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
@@ -38,7 +38,7 @@ const HowItWorks = () => (
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {steps.map((s, i) => (
-          <div key={s.title} className="relative bg-card rounded-xl p-6 shadow-card text-center group hover:shadow-card-hover transition-shadow">
+          <div key={s.title} className="relative  bg-card rounded-xl p-6 shadow-card text-center group hover:shadow-card-hover transition-shadow">
             <div className="absolute -top-3 -left-2 w-8 h-8 rounded-full gradient-hero flex items-center justify-center text-sm font-bold text-primary-foreground">
               {i + 1}
             </div>
