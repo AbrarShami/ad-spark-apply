@@ -115,7 +115,7 @@ const Apply = () => {
               style={{ backgroundSize: "cover", backgroundRepeat: "no-repeat" }}
             >
               <img
-                src="../../public/c4.webp"
+                src="/c4.webp"
                 className="w-100 wow scaleIn animated"
                 data-wow-duration="2s"
                 alt=""
@@ -144,7 +144,7 @@ const Apply = () => {
           }}
         >
           <img
-            src="../../public/2.webp"
+            src="/2.webp"
             className="jarallax-img"
             alt=""
             style={{

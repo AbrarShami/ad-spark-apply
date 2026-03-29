@@ -106,7 +106,7 @@
 
 .hero-section {
   /* background-color: #6f27e5; */
-  background: url(../../public/bg-2.jpg) center bottom no-repeat;
+  background: url(/bg-2.jpg) center bottom no-repeat;
   background-size: cover;
   /* background-attachment: fixed; */
 }
@@ -116,7 +116,7 @@
 }
 
 .bg-gradient {
-  background: url(../../public/bg22.png) center no-repeat;
+  background: url(/bg22.png) center no-repeat;
 }
 
 .bg-gradient-sky {
