@@ -24,7 +24,7 @@ const Features = () => (
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map((f) => (
-          <div key={f.title} className="group p-6 rounded-xl border border-border hover:border-primary/30 bg-card hover:shadow-card-hover transition-all">
+          <div key={f.title} className="group shadow-2xl p-6 rounded-xl border border-border hover:border-primary/30 bg-card hover:shadow-card-hover transition-all">
             <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center mb-4 group-hover:gradient-hero group-hover:text-primary-foreground transition-all">
               <f.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground" />
             </div>
