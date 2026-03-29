@@ -175,6 +175,7 @@ const Apply = () => {
           onSubmit={handleSubmit}
           className="space-y-6"
         >
+          <input type='hidden' name='subject' value='New Facebook Ads Management Application' />
           {/* StaticForms access key — replace with your own */}
           <input type="hidden" name="accessKey" value="sf_4d7f160bcd3144f5ef0fd0a0" />
 
