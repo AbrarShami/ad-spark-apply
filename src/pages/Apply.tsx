@@ -40,8 +40,17 @@ const Apply = () => {
         <form
           action="https://api.staticforms.xyz/submit"
           method="POST"
-          onSubmit={() => {
-            setTimeout(() => setSubmitted(true), 100);
+          onSubmit={(e) => {
+            e.preventDefault();
+            const form = e.currentTarget;
+            fetch(form.action, {
+              method: "POST",
+              body: new FormData(form),
+            }).then(() => {
+              navigate("/thank-you");
+            }).catch(() => {
+              navigate("/thank-you");
+            });
           }}
           className="space-y-6"
         >
