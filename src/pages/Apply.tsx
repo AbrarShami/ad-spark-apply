@@ -179,7 +179,7 @@ const Apply = () => {
           <input type="hidden" name="accessKey" value="sf_4d7f160bcd3144f5ef0fd0a0" />
 
           {/* Contact Info */}
-          <div className="p-6 rounded-xl border border-border space-y-4">
+          <div className="p-6 form-container  rounded-xl border border-border space-y-4">
             <h2 className="font-bold text-lg">Contact Information</h2>
 
             <div className="grid sm:grid-cols-2 gap-4">
@@ -211,7 +211,7 @@ const Apply = () => {
           </div>
 
           {/* Qualifying Questions */}
-          <div className="p-6 rounded-xl border border-border space-y-4">
+          <div className="p-6 form-container  rounded-xl border border-border space-y-4">
             <h2 className="font-bold text-lg">Qualifying Questions</h2>
 
             <div className="space-y-2">
