@@ -176,8 +176,8 @@ const Apply = () => {
           className="space-y-6"
         >
           <input type='hidden' name='subject' value='New Facebook Ads Management Application' />
-          {/* StaticForms access key — replace with your own */}
-          <input type="hidden" name="accessKey" value="sf_4d7f160bcd3144f5ef0fd0a0" />
+          {/* StaticForms access key*/}
+          <input type="hidden" name="accessKey" value="sf_8f020568011aa14e0a37d5f7" />
 
           {/* Contact Info */}
           <div className="p-6 form-container  rounded-xl border border-border space-y-4">
